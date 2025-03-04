@@ -1,0 +1,102 @@
+/* Base Styles */
+html {
+    font-size: 20px;
+    margin: 0;
+    background: #0c0207;
+}
+
+/* Fonts */
+.playfair-display-400 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair-display-900 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Container Elements */
+#marco {
+    width: 1325px;
+    height: 500px;
+    margin: 2em auto 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+#cielo {
+    width: 1325px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    margin-top: 2em;
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #0B4C5F 0%, #04B4AE 52%, #0c0207 100%);
+    z-index: -30;
+}
+
+#edificios {
+    width: 1325px;
+    height: 500px;
+    position: absolute;
+    top: 6.5em;
+    z-index: -10;
+    background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526533/eva/edificiosOne_fsg7nx.svg');
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: animar_edificios 120s linear infinite;
+}
+
+#luna {
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 50%;
+    z-index: -19;
+    border-radius: 50%;
+    box-shadow: 30px 10px 0 #F7F8E0;
+}
+
+#muro {
+    width: 100%;
+    height: 23em;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to bottom, #416663 0%, #0c0207 19%);
+}
+
+#gato {
+    width: 507.5px;
+    height: 297px;
+    margin-top: 2em;
+    margin-left: 2em;
+    z-index: 10;
+    background: url('https://res.cloudinary.com/pastelitos/image/upload/v1610526571/eva/gatito_pushui.svg');
+    animation: sprite-animation 1.2s steps(16, end) infinite;
+}
+
+/* Signature */
+#signature {
+    position: absolute;
+    top: 75px;
+    right: 100px;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
+/* Animations */
+@keyframes animar_edificios {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@keyframes sprite-animation {
+    from { background-position: 0 0; }
+    to { background-position: -8120px 0; }
+}
